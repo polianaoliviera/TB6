@@ -1,0 +1,24 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+
+    <bean id="idCtrl" class="ma.cigma.pfe.presentation.ClientController">
+
+        <property name="service" ref="idservice"></property>
+
+    </bean>
+    <bean id="idservice" class="ma.cigma.pfe.servic.ClientServiceImpl">
+        <property name="dao" ref="iddao"></property>
+
+    </bean>
+
+    <bean id="iddao" class="ma.cigma.pfe.dao.ClientDaoImpl" scope="prototype">
+
+
+    </bean>
+
+
+</beans>
